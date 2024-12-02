@@ -1,0 +1,371 @@
+body {
+  overflow-y: scroll;
+}
+
+.app-brand.demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-vertical .app-brand {
+  padding-left: 15px;
+}
+
+.btn-primary {
+  background-color: #4dace1;
+  color: #fff;
+}
+
+/* The checkbox container */
+.wu-checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-height: 25px;
+}
+
+/* Hide the browser's default checkbox */
+.wu-checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 0.375rem;
+}
+
+/* On mouse-over, add a grey background color */
+/* .wu-checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+} */
+
+.wu-checkbox-container .checkmark {
+  background-color: #c4c4c4;
+}
+
+/* When the checkbox is checked, add a blue background */
+.wu-checkbox-container input:checked ~ .checkmark {
+  background-color: #4dace1;
+}
+
+.wu-checkbox-container input:checked ~ .checkmark.dissmissed {
+  background-color: #ffab00;
+}
+
+.wu-checkbox-container input:checked ~ .checkmark.rejected {
+  background-color: #ff3e1d;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.wu-checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.wu-checkbox-container .checkmark:after {
+  left: 9px;
+  top: 7px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.mobile-nav {
+  background: #fff;
+  border-top: 1px solid #c4c4c4;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1040;
+  bottom: 0;
+}
+
+.mobile-nav .nav {
+  width: 100%;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.mobile-nav .nav-link {
+  color: #566a7f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  padding: 0.75rem;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.mobile-nav .nav-link img {
+  height: 24px;
+  margin-bottom: 0.5rem;
+}
+
+.mobile-nav .nav-link span.menu-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.mobile-nav .nav-link .badge-cart {
+  top: 0.7rem;
+  right: 1.3rem;
+}
+
+.authentication-wrapper.authentication-basic .authentication-inner {
+  max-width: 400px;
+  position: relative;
+}
+
+.authentication-wrapper .authentication-inner {
+  width: 100%;
+}
+
+.authentication-wrapper.authentication-basic {
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.authentication-wrapper {
+  display: flex;
+  flex-basis: 100%;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.wu-dropdown-user {
+  padding: 0 !important;
+  border-radius: 50%;
+}
+
+.wu-dropdown-user::after {
+  display: none;
+}
+
+.wu-dropdown-user .avatar {
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.avatar.avatar-online::after {
+  content: none;
+}
+
+.avatar.avatar-online {
+  object-fit: cover;
+  object-position: top;
+}
+.pagination .prev .page-link,
+.pagination .next .page-link {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.pagination .next .page-link {
+  margin-left: 0.1875rem;
+}
+.pagination .prev i,
+.pagination .next i {
+  font-size: 1.5rem;
+}
+
+.app-brand-text .small {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.modal-xl {
+  max-width: 1400px;
+}
+
+.menu-toggle.active::after {
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.card[class*="card-border-shadow-"] {
+  position: relative;
+  border-bottom: none;
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.card.card-border-shadow-primary::after {
+  border-bottom-color: #c3c4ff;
+}
+
+.card.card-border-shadow-warning::after {
+  border-bottom-color: #fd9;
+}
+
+.card.card-border-shadow-danger::after {
+  border-bottom-color: #ffb2a5;
+}
+
+.card.card-border-shadow-info::after {
+  border-bottom-color: #9ae7f7;
+}
+
+.card[class*="card-border-shadow-"]::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  z-index: -1;
+}
+
+.wu-max-content {
+  width: max-content;
+}
+
+.wu-color-box {
+  width: 10px;
+  height: 10px;
+}
+
+.layout-menu {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.dropdown-menu {
+  width: max-content !important;
+}
+
+.trend-chart .recharts-legend-wrapper {
+  bottom: 0px !important; /* Adjust this value based on your layout */
+}
+
+.wu-table-head {
+  background-color: #264f9d;
+}
+
+.wu-table-head th {
+  color: #fff !important;
+}
+
+.without-icon::after {
+  content: none;
+}
+@media (max-width: 1199.98px) {
+  .layout-menu {
+    position: fixed !important;
+    top: 0 !important;
+    height: 100% !important;
+    left: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    transform: translate3d(-100%, 0, 0);
+    will-change: transform, -webkit-transform;
+  }
+  .aside-mob-show .layout-menu {
+    display: block;
+    transition: all 0.3s;
+    transform: translate3d(0, 0, 0) !important;
+  }
+}
+
+@media (min-width: 1199.98px) {
+  .wu-lg-50 {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card-body {
+    padding: 1rem 1rem;
+  }
+
+  .modal-footer {
+    padding: 0.25rem 1rem 1rem;
+  }
+
+  .btn {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.875rem;
+  }
+
+  .btn-icon {
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    display: inline-flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wu-mob-full-modal .modal-dialog {
+    margin: 0;
+    padding: 0 !important;
+  }
+
+  .wu-mob-full-modal .modal-content {
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .modal-header {
+    padding: 15px !important;
+    padding-bottom: 0 !important;
+  }
+
+  .modal-body {
+    padding: 15px !important;
+  }
+
+  .modal {
+    padding-left: 0 !important;
+  }
+
+  .modal .modal-header .btn-close {
+    margin-top: -0.25rem;
+  }
+
+  .wu-horizontal-bars {
+    width: 100%;
+    height: 100%;
+  }
+}
